@@ -11,40 +11,41 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Domains INTEGRATION" enabled="true">
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Environment variables" enabled="true">
         <collectionProp name="Arguments.arguments">
           <elementProp name="protocol" elementType="Argument">
             <stringProp name="Argument.name">protocol</stringProp>
-            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.value">${__P(protocol)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">https. http</stringProp>
           </elementProp>
           <elementProp name="domain" elementType="Argument">
             <stringProp name="Argument.name">domain</stringProp>
-            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.value">${__P(domain)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">e.g.: google.com</stringProp>
           </elementProp>
           <elementProp name="author" elementType="Argument">
             <stringProp name="Argument.name">author</stringProp>
-            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.value">${__P(author)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">author domain</stringProp>
           </elementProp>
           <elementProp name="author-admin" elementType="Argument">
             <stringProp name="Argument.name">author-admin</stringProp>
-            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.value">${__P(author-admin)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">Authoring admin user - Invalidation</stringProp>
           </elementProp>
           <elementProp name="author-password" elementType="Argument">
             <stringProp name="Argument.name">author-password</stringProp>
-            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.value">${__P(author-password)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">Authoring admin padd - Invalidation</stringProp>
+            <stringProp name="Argument.desc">Authoring admin password - Invalidation</stringProp>
           </elementProp>
           <elementProp name="content-demo" elementType="Argument">
             <stringProp name="Argument.name">content-demo</stringProp>
-            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.value">${__P(content-demo)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">content to be replicated to Publish</stringProp>
           </elementProp>
@@ -52,143 +53,39 @@
         <stringProp name="TestPlan.comments">Domains for Integration env</stringProp>
       </Arguments>
       <hashTree/>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Domains STAGING" enabled="false">
-        <collectionProp name="Arguments.arguments">
-          <elementProp name="protocol" elementType="Argument">
-            <stringProp name="Argument.name">protocol</stringProp>
-            <stringProp name="Argument.value"></stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">https. http</stringProp>
-          </elementProp>
-          <elementProp name="domain" elementType="Argument">
-            <stringProp name="Argument.name">domain</stringProp>
-            <stringProp name="Argument.value"></stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">e.g.: google.com</stringProp>
-          </elementProp>
-          <elementProp name="author" elementType="Argument">
-            <stringProp name="Argument.name">author</stringProp>
-            <stringProp name="Argument.value"></stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="author-admin" elementType="Argument">
-            <stringProp name="Argument.name">author-admin</stringProp>
-            <stringProp name="Argument.value"></stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">Authoring admin user - Invalidation</stringProp>
-          </elementProp>
-          <elementProp name="author-password" elementType="Argument">
-            <stringProp name="Argument.name">author-password</stringProp>
-            <stringProp name="Argument.value"></stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">Authoring admin padd - Invalidation</stringProp>
-          </elementProp>
-          <elementProp name="content-demo" elementType="Argument">
-            <stringProp name="Argument.name">content-demo</stringProp>
-            <stringProp name="Argument.value"></stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">content to be replicated to Publish</stringProp>
-          </elementProp>
-        </collectionProp>
-        <stringProp name="TestPlan.comments">Domains for Staging env</stringProp>
-      </Arguments>
-      <hashTree/>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables LOAD" enabled="true">
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Load parameters" enabled="true">
         <collectionProp name="Arguments.arguments">
           <elementProp name="threads" elementType="Argument">
             <stringProp name="Argument.name">threads</stringProp>
-            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.value">${__P(threads)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="rampup" elementType="Argument">
             <stringProp name="Argument.name">rampup</stringProp>
-            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.value">${__P(rampup)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">seconds</stringProp>
           </elementProp>
           <elementProp name="think-time-constant" elementType="Argument">
             <stringProp name="Argument.name">think-time-constant</stringProp>
-            <stringProp name="Argument.value">1000</stringProp>
+            <stringProp name="Argument.value">${__P(think-time-constant)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">miliseconds</stringProp>
           </elementProp>
           <elementProp name="think-time-deviation" elementType="Argument">
             <stringProp name="Argument.name">think-time-deviation</stringProp>
-            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.value">${__P(think-time-deviation)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">miliseconds</stringProp>
           </elementProp>
           <elementProp name="dispatcher-invalidation-time" elementType="Argument">
             <stringProp name="Argument.name">dispatcher-invalidation-time</stringProp>
-            <stringProp name="Argument.value">100000</stringProp>
+            <stringProp name="Argument.value">${__P(dispatcher-invalidation-time)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">miliseconds</stringProp>
           </elementProp>
         </collectionProp>
         <stringProp name="TestPlan.comments">variables</stringProp>
-      </Arguments>
-      <hashTree/>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables SOAK" enabled="false">
-        <collectionProp name="Arguments.arguments">
-          <elementProp name="threads" elementType="Argument">
-            <stringProp name="Argument.name">threads</stringProp>
-            <stringProp name="Argument.value">1</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="rampup" elementType="Argument">
-            <stringProp name="Argument.name">rampup</stringProp>
-            <stringProp name="Argument.value">1</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">seconds</stringProp>
-          </elementProp>
-          <elementProp name="think-time-constant" elementType="Argument">
-            <stringProp name="Argument.name">think-time-constant</stringProp>
-            <stringProp name="Argument.value">1000</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">miliseconds</stringProp>
-          </elementProp>
-          <elementProp name="think-time-deviation" elementType="Argument">
-            <stringProp name="Argument.name">think-time-deviation</stringProp>
-            <stringProp name="Argument.value">1</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">miliseconds</stringProp>
-          </elementProp>
-          <elementProp name="dispatcher-invalidation-time" elementType="Argument">
-            <stringProp name="Argument.name">dispatcher-invalidation-time</stringProp>
-            <stringProp name="Argument.value">100000</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">miliseconds</stringProp>
-          </elementProp>
-        </collectionProp>
-        <stringProp name="TestPlan.comments">variables</stringProp>
-      </Arguments>
-      <hashTree/>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables debug" enabled="false">
-        <collectionProp name="Arguments.arguments">
-          <elementProp name="threads" elementType="Argument">
-            <stringProp name="Argument.name">threads</stringProp>
-            <stringProp name="Argument.value">1</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="rampup" elementType="Argument">
-            <stringProp name="Argument.name">rampup</stringProp>
-            <stringProp name="Argument.value">1</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">seconds</stringProp>
-          </elementProp>
-          <elementProp name="think-time-constant" elementType="Argument">
-            <stringProp name="Argument.name">think-time-constant</stringProp>
-            <stringProp name="Argument.value">1000</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">miliseconds</stringProp>
-          </elementProp>
-          <elementProp name="think-time-deviation" elementType="Argument">
-            <stringProp name="Argument.name">think-time-deviation</stringProp>
-            <stringProp name="Argument.value">1</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-            <stringProp name="Argument.desc">miliseconds</stringProp>
-          </elementProp>
-        </collectionProp>
       </Arguments>
       <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Publish Thread" enabled="true">
