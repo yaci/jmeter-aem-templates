@@ -28,16 +28,16 @@ Copy .xml snippet from "templates-snippet.xml" and  paste into JMeter templates 
 # Running
 We assume that you are in JMETER_HOME/bin directory.
 
-To run the tests from the console, execute  
-`jmeter -q [path/to]environment.properties -q [path/to]loadparams.properties`
+To open and edit test in GUI, execute  
+`jmeter -q environment.properties -q loadparams.properties`
 
-We advise that you make a copies of environment.properties file, one for every of your environments, so then you can run  
+To run the tests from command line, execute  
+`jmeter -n -q [path/to]environment.properties -q [path/to]loadparams.properties`
+
+We advise that you make a copies of environment.properties file, one for each of your environments, so then you can run  
 `jmeter -n -q integration.properties -q loadparams.properties` or  
 `jmeter -n -q staging.properties -q loadparams.properties`  
 Similarily you can make copies of loadparams.properties so you can easily run the same test with different loads.
-
-For opening tests in GUI, simply omit `-n` parameter from above example, i.e.  
-`jmeter -q environment.properties -q loadparams.properties`
  
 # All Features
 * Test Plan element - with ${project} variable to be changed.
