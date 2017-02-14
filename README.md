@@ -31,7 +31,7 @@ We assume that you are in JMETER_HOME/bin directory.
 To run the tests from the console, execute  
 `jmeter -q [path/to]environment.properties -q [path/to]loadparams.properties`
 
-We advise that you make a copy of environment.properties file, one for every of your environments, so then you can run  
+We advise that you make a copies of environment.properties file, one for every of your environments, so then you can run  
 `jmeter -n -q integration.properties -q loadparams.properties` or  
 `jmeter -n -q staging.properties -q loadparams.properties`  
 Similarily you can make copies of loadparams.properties so you can easily run the same test with different loads.
